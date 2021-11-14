@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 70px;
+  font-family: Monaco, arial, sans-serif;
+  margin: 25px auto;
+  text-align: center;
+  background: #eeeee4;
+}
+
+main {
+  display: block;
+  height: 175px;
+}
+
+header {
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  font-weight: bold;
+  color: #000;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  max-width: 600px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  padding-top: 25px;
+  border-top: 1px solid black;
+}
+
+footer a {
+  float: left;
+  margin: 5px;
+}
+
+.pet-image {
+  height: 250px;
+  width: auto;
+}
+
+.dashboard div {
+  display: block;
+}
+
+/* pet comment/notification styles */
+#notification {
+  font-family: Monaco;
+  visibility: hidden;
+  width: fit-content;
+  margin: auto;
+  background: #;
+  text-align: center;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 10px;
+  white-space: nowrap;
+}
+
+#notification #desc {
+  font-size: 40px;
+  color: #000000;
+  padding: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Called when the "show" class is called in JQuery */
+#notification.show {
+  visibility: visible;
+  animation: fadein 1s, fadeout 2s 1s;
+}
+
+/* notification styles animation */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.pet-image.shake {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+/* animation for "shake" */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
